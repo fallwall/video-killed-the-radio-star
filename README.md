@@ -1,41 +1,68 @@
-PROJECT OVERVIEW
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**DESCRIPTION**
-      Courses of our life has never been the same since the birth of music video in 1981 - when MTV played the first music video "Video Killed The Radio Star" by The Buggles. This project is dedicated to the music videos of every decades ever since.
-      Built on <a href="https://developer.vimeo.com/">Vimeo API</a>, this app brings four decades of iconic music videos from 10s/00s/90s/80s to users with options of 1.) Random choice; 2.) User selection. 
-      
-**WIREFRAMES**
-  (insert image here)
+## Available Scripts
 
-**MVP**
-Part 1: Playlists
-  - User can chose playlist of each decades.
-  - User can randomly start a playlist without selection.
-  - Pre-selected Vimeo playlists will load and play.
-  
-Part 2: Search Bar
-  - User can also search Vimeo with key words of her/his own choice.
- 
-Part 3: 
-  - Bonus playlist of avaible at credit section. 
-    (aka Editor's Choice; aka the mini version <a href="https://music.apple.com/us/playlist/coding-crushing-it/pl.u-76oNNrBC42qobo">Coding and Crashing It</a>.)
-  
-      
+In the project directory, you can run:
 
-**REACT COMPONENTS HIERARCHY**
-  1 Header <br />
-        2 Nav<br />
-  1 Main<br />
-        2 Intro<br />
-              3 Random<br />
-              3 Selection<br />
-              3 Search<br />
-        2 Screen<br />
-  1 Footer<br />
-  
+### `npm start`
 
-**ADDITIONAL LIBRARIES**
-<a href="https://github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video. 
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**ISSUES & RESOLUTION**
-To be updated.
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
