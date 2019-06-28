@@ -4,5 +4,13 @@
 }
 
 header nav a {
+  text-decoration: none;
+  color:black;
   margin: 2em;
 }
+
+header nav img, footer img {
+  height: 1em;
+  width: 1em;
+}
+
