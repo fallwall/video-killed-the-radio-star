@@ -1,10 +1,8 @@
-body {
+* {
   text-align: center;
+  font-family: 'Ultra', serif;
 }
 
-header a {
-  margin: 20px;
-}
-.video {
-  border: none;
+header nav a {
+  margin: 2em;
 }

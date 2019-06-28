@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
       <header>
-      <p>SOME HEADER HERE</p>
+        <h1>Video Killed Radio Star</h1>
         <Nav />
       </header>
     </>

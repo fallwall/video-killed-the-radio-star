@@ -1,11 +1,10 @@
 import React from 'react';
-import './Spinner.css';
 
 export default function Spinner() {
 
   return (
-
-    <div className="spinner-container">
+    <>
+      {/* <div className="spinner-container">
    
     <div className="spin-the-wheel">
       
@@ -33,6 +32,7 @@ export default function Spinner() {
     
   </label>
   </div> 
-</div>
+      </div> */}
+    </>
   )
 }
