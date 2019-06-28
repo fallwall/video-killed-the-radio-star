@@ -23,16 +23,15 @@ Part 3:
       
 
 **REACT COMPONENTS HIERARCHY**
-components/
-  - <Header />
-        -<Nav />
-  - <Main />
-        -<Intro />
-              - <Random />
-              - <Selection />
-              - <Search />
-        - <Screen />
-  - <Footer />
+  Header
+        Nav
+  Main
+        Intro
+              Random
+              Selection
+              Search
+        Screen
+  Footer
   
 
 **ADDITIONAL LIBRARIES**
