@@ -4,10 +4,10 @@ PROJECT OVERVIEW
 
 **DESCRIPTION**
       Courses of our life has never been the same since the birth of music video in 1981 - when MTV played the first music video "Video Killed The Radio Star" by The Buggles. This project is dedicated to the music videos of every decades ever since.
-      Built on <a href="https://developer.vimeo.com/">Vimeo API</a>, this app brings four decades of iconic music videos from 10s/00s/90s/80s to users with options of 1.) Random choice; 2.) User selection. 
+      Built on <://developer.vimeo.com/">Vimeo API</a>, this app brings four decades of iconic music videos from 10s/00s/90s/80s to users with options of 1.) Random choice; 2.) User selection. 
 
 
-      <img src="https://media.giphy.com/media/8fRy4tyMSAZEs/giphy.gif" />
+      ![](https://media.giphy.com/media/8fRy4tyMSAZEs/giphy.gif)
       
 **WIREFRAMES**
   (insert image here)
@@ -23,7 +23,7 @@ Part 2: Search Bar
  
 Part 3: 
   - Bonus playlist of avaible at credit section. 
-    (aka Editor's Choice; aka the mini version <a href="https://music.apple.com/us/playlist/coding-crushing-it/pl.u-76oNNrBC42qobo">Coding and Crashing It</a>.)
+    (aka Editor's Choice; aka the mini version <://music.apple.com/us/playlist/coding-crushing-it/pl.u-76oNNrBC42qobo">Coding and Crashing It</a>.)
   
       
 
@@ -40,7 +40,7 @@ Part 3:
   
 
 **ADDITIONAL LIBRARIES**
-<a href="https://github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video. 
+<://github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video. 
 
 **ISSUES & RESOLUTION**
 To be updated.
