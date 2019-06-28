@@ -1,5 +1,5 @@
 PROJECT OVERVIEW
-
+![](https://media.giphy.com/media/8fRy4tyMSAZEs/giphy.gif)
 
 
 **DESCRIPTION**
@@ -7,7 +7,7 @@ PROJECT OVERVIEW
       Built on <://developer.vimeo.com/">Vimeo API</a>, this app brings four decades of iconic music videos from 10s/00s/90s/80s to users with options of 1.) Random choice; 2.) User selection. 
 
 
-      ![](https://media.giphy.com/media/8fRy4tyMSAZEs/giphy.gif)
+      
       
 **WIREFRAMES**
   (insert image here)
