@@ -5,7 +5,7 @@ PROJECT OVERVIEW
 
 
 **DESCRIPTION**
-      Courses of our life has never been the same since the birth of music video in 1981 - when MTV played the first music video "Video Killed The Radio Star" by The Buggles. This project is dedicated to the music videos of every decades ever since.
+      Course of our life has never been the same since the birth of music video in 1981 - when MTV played the first music video "Video Killed The Radio Star" by The Buggles. This project is dedicated to the music videos of every decades ever since.
       Built on <://developer.vimeo.com/">Vimeo API</a>, this app brings four decades of iconic music videos from 10s/00s/90s/80s to users with options of 1.) Random choice; 2.) User selection. 
 
 
@@ -30,7 +30,7 @@ Part 3:
       
 
 **REACT COMPONENTS HIERARCHY**
-  1 Header <br />
+  <br />1 Header <br />
         2 Nav<br />
   1 Main<br />
         2 Intro<br />
