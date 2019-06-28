@@ -1,4 +1,6 @@
-PROJECT OVERVIEW
+PROJECT OVERVIEW 
+
+
 ![](https://media.giphy.com/media/8fRy4tyMSAZEs/giphy.gif)
 
 
@@ -40,7 +42,7 @@ Part 3:
   
 
 **ADDITIONAL LIBRARIES**
-<://github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video. 
+<a href="//github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video. 
 
 **ISSUES & RESOLUTION**
 To be updated.
