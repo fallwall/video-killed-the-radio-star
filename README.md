@@ -27,7 +27,7 @@ Part 2: Search Bar
  
 Part 3: 
   - Bonus playlist of avaible at credit section. 
-    (aka Editor's Choice; aka the mini version <://music.apple.com/us/playlist/coding-crushing-it/pl.u-76oNNrBC42qobo">Coding and Crashing It</a>.)
+    (aka Editor's Choice; aka the mini version <a href="http://music.apple.com/us/playlist/coding-crushing-it/pl.u-76oNNrBC42qobo">Coding and Crashing It</a>.)
   
       
 

@@ -1,0 +1,7 @@
+.screen {
+  height: 100vh;
+  background-image: url("../images/screenbackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+}
