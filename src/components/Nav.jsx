@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Heart from '../images/heart.png';
 
 export default function Nav() {
   return (

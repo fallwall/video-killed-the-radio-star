@@ -2,7 +2,9 @@ body {
   text-align: center;
 }
 
-.screen {
-  background-image: url("images/screenbackground.jpg");
-  
+header a {
+  margin: 20px;
+}
+.video {
+  border: none;
 }

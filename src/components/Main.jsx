@@ -7,7 +7,7 @@ export default function Main() {
   return (
     <>
       <p>SOME MAIN STUFF HERE</p>
-      <Route path="/intro" render={() => <Intro />} />
+      <Route path="/" exact render={() => <Intro />} />
       <Route path="/screen" render={()=> <Screen />}/>
     </>
   )

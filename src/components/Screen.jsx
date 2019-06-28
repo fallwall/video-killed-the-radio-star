@@ -45,8 +45,8 @@ export default class Screen extends React.Component {
         <div className="video-container">
           
           <Iframe url={"https://player.vimeo.com/video/" +this.state.currentVideo} 
-                // width="450px"
-                // height="450px"
+                width="300px"
+                height="300px"
                 id="video"
                 className="video"
                 display="initial"
