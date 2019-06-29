@@ -1,59 +1,61 @@
 import React from 'react';
 import Iframe from 'react-iframe';
-import { searchVideo } from '../services/api'
 import './Screen.css';
 
 
-export default class Screen extends React.Component {
-  constructor() {
-    super();
+class Screen extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      uriList: [],
+      list: props.list,
+      current: props.list[0]
     }
   }
 
-  async componentDidMount() {
-    const resp = await searchVideo();
-
-    // const uriList = shuffle(resp.data);
+  handleClickForward = (ev) => {
+    ev.preventDefault();
+    const current = this.state.list[this.state.list.indexOf(this.state.list[0]) + 1];
     this.setState({
-      uriList: resp.data
+      current: current
     })
-
-    console.log(this.state.uriList);
- 
   }
 
-  // shuffle = (arr) => {
-  //   for (let i = arr.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [arr[i], arr[j]] = [arr[j], arr[i]];
-  //   }
-  //   return arr;
-  // }
-
+  handleClickBackward = (ev) => {
+    ev.preventDefault();
+    const current = this.state.list[this.state.list.indexOf(this.state.list[0]) - 1];
+    this.setState({
+      current: current
+    })
+  }
 
 
   render() {
+    console.log(this.state.list);
     return (
 
       <div className="screen" >
         <p>Something Screen</p>
         <div className="video-container">
-          
-          { (this.state.uriList !== []) &&
-            <Iframe url={"https://player.vimeo.com/video/" + this.state.currentVideo}
-              width="300px"
-              height="300px"
+
+          {(this.state.list !== []) &&
+
+            <Iframe url={"https://player.vimeo.com/video/" + this.state.current}
+              width="450px"
+              height="450px"
               id="video"
               className="video"
               display="initial"
               position="relative" />}
-             
+
+          <button onClick={this.handleClickBackward}>Previous</button>
+          <button onClick={this.handleClickForward}>Next</button>
         </div>
       </div>
 
-  )
-}
+    )
+  }
+
 
 }
+
+export default Screen;

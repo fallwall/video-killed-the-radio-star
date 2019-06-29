@@ -18,27 +18,41 @@ class Main extends React.Component {
     this.setState({
       userInput: userInput
     })
-    console.log(this.state.userInput);
   }
 
   handleSubmit = async (ev) => {
     ev.preventDefault();
-    const list = await searchVideo(this.state.userInput);
+    const responseList = await searchVideo(this.state.userInput);
+    const newList = this.shuffle(responseList);
+    const list = newList.map((element) => element.uri.split("/")[element.uri.split("/").length - 1]);
     this.setState({
       list: list
     })
-    console.log(this.state.list);
-    // this.props.history.push('/Screen');
+    this.props.history.push('/Screen');
   }
+
+
+ shuffle = (arr) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+ }
+  
+
+  
+ 
 
   render() {
     return (
-    <>
-      <Route path="/" exact render={() => <Intro handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>} />
-      <Route path="/screen" render={()=> <Screen />}/>
-    </>
-  )}
-  
+      <>
+        <Route path="/" exact render={() => <Intro handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>} />
+        <Route path="/screen" render={() => <Screen list={this.state.list} />} />
+      </>
+    )
+  }
+
 }
 
 export default withRouter(Main);
