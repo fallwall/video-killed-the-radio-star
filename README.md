@@ -44,7 +44,9 @@ Part 3:
   
 
 **ADDITIONAL LIBRARIES**
-<a href="//github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video. 
+<a href="//github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video.
+react-router-dom
+axios 
 
 **ISSUES & RESOLUTION**
 To be updated.
