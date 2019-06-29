@@ -1,7 +1,8 @@
 import React from 'react';
 import { searchVideo } from '../services/api';
+import { withRouter } from 'react-router-dom';
 
-export default class Search extends React.Component {
+class Search extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -26,6 +27,7 @@ export default class Search extends React.Component {
       list: list
     })
     console.log(this.state.list);
+    this.props.history.push('/Screen');
   }
 
   // componentDidUpdate() { 
@@ -58,3 +60,5 @@ export default class Search extends React.Component {
   }
 
 }
+
+export default withRouter(Search);
