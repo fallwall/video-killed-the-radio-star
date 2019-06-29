@@ -9,7 +9,6 @@ export default class Screen extends React.Component {
     super();
     this.state = {
       uriList: [],
-      currentVideo: ""
     }
   }
 
@@ -18,13 +17,11 @@ export default class Screen extends React.Component {
 
     // const uriList = shuffle(resp.data);
     this.setState({
-      uriList: resp.data,
-      currentVideo: resp.data[0].uri.split("/")[resp.data[0].uri.split("/").length -1]
+      uriList: resp.data
     })
 
     console.log(this.state.uriList);
-    console.log(this.state.uriList[0]);
-    console.log(this.state.currentVideo);
+ 
   }
 
   // shuffle = (arr) => {
@@ -44,13 +41,14 @@ export default class Screen extends React.Component {
         <p>Something Screen</p>
         <div className="video-container">
           
-          <Iframe url={"https://player.vimeo.com/video/" +this.state.currentVideo} 
-                width="300px"
-                height="300px"
-                id="video"
-                className="video"
-                display="initial"
-                position="relative" />
+          { (this.state.uriList !== []) &&
+            <Iframe url={"https://player.vimeo.com/video/" + this.state.currentVideo}
+              width="300px"
+              height="300px"
+              id="video"
+              className="video"
+              display="initial"
+              position="relative" />}
              
         </div>
       </div>
