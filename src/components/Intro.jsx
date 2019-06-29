@@ -3,14 +3,14 @@ import Search from './Search';
 import Spinner from './Spinner';
 
 
-export default function Intro() {
+export default function Intro(props) {
   return (
     <>
     
 
 
-        <Search />
-        <Spinner />
+      <Search handleChange={props.handleChange} handleSubmit={props.handleSubmit} />
+      <Spinner />
 
 
 

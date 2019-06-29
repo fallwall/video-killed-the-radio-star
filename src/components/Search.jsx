@@ -9,7 +9,7 @@ function Search(props) {
 
         <form onChange={props.handleChange} onSubmit={props.handleSubmit}>
           <input type="text" name="userInput" placeholder="Search keyword..." />
-          <button> Search</button>
+          <button>Search</button>
         </form>
       </div>
     </>
