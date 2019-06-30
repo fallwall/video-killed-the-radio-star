@@ -1,5 +1,5 @@
 import React from 'react';
-import Iframe from 'react-iframe';
+
 import './Screen.css';
 
 
@@ -30,22 +30,19 @@ class Screen extends React.Component {
 
 
   render() {
-    console.log(this.state.list);
     return (
 
       <div className="screen" >
         <p>Something Screen</p>
         <div className="video-container">
-
-          {(this.state.list !== []) &&
-
+            {/* {this.state.list !== [] &&
             <Iframe url={"https://player.vimeo.com/video/" + this.state.current}
               width="450px"
               height="450px"
               id="video"
               className="video"
               display="initial"
-              position="relative" />}
+              position="relative" />} */}
 
           <button onClick={this.handleClickBackward}>Previous</button>
           <button onClick={this.handleClickForward}>Next</button>
