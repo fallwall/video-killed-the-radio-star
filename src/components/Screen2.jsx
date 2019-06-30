@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import './Screen.css';
 
-
 class Screen2 extends React.Component {
   constructor(props) {
     super(props);
@@ -13,11 +12,13 @@ class Screen2 extends React.Component {
     }
   }
 
-  componentDidMount() { 
+  componentDidMount() {
     const testlist = Object.values(this.props.location.state.list);
+    let urlList = testlist[0].map((videoId) => {
+      return `https://player.vimeo.com/video/${videoId}`
+    });
     this.setState({
-      list: testlist,
-     
+      list: urlList
     })
   }
 
@@ -25,55 +26,43 @@ class Screen2 extends React.Component {
     window.location.reload();
   }
 
-
   nextSong = () => {
-    this.setState(prevState => ({  
+    this.setState(prevState => ({
       current: prevState.current + 1
     }))
-    console.log(this.state.current);
-    this.state.current.forceUpdate();
-     
   }
 
-  
-  
-  render() {
-    let urlList;
-    if(!this.state.list){
-      return <div>Loading…</div>;
-      }
-      urlList = this.state.list.map(
-        element => (`https://player.vimeo.com/video/${ element }` ));
-    console.log(urlList);
-
+  renderVideo = () => {
     return (
-
       <div className="screen" >
-      <p> THIS IS SCREEN2 TEST AREA</p>
+        <p> THIS IS SCREEN2 TEST AREA</p>
         <div className="video-container">
-         
-
-          { 
-            this.state.list !== [] &&
-            <ReactPlayer
-              className='react-player'
-              playing
-              url={urlList[this.state.current]}
-              onEnded={() => {
-                this.nextSong()
-              }}
+          <ReactPlayer
+            className='react-player'
+            playing
+            url={this.state.list[this.state.current]}
+            onEnded={() => {
+              this.nextSong()
+            }}
           />
-          }
-            
-         
-          
         </div>
       </div>
+    )
+  }
+
+  render() {
+    return (
+      <div>
+        {
+          this.state.list.length ?
+            this.renderVideo()
+            : (
+              <div>Loading…</div>
             )
-  
-
-
-}
+        }
+      </div>
+    )
+  }
 }
 
 export default withRouter(Screen2);
