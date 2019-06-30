@@ -10,17 +10,21 @@ class Screen2 extends React.Component {
     this.state = {
       list: [],
       current: 0
+
     }
   }
 
   componentDidMount() { 
     const testlist = Object.values(this.props.location.state.list);
     this.setState({
-      list: testlist
+      list: testlist,
+     
     })
   }
 
- 
+  componentWillReceiveProps(nextProps) {
+    window.location.reload();
+  }
 
   render() {
     let urlList;

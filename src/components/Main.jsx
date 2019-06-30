@@ -50,7 +50,7 @@ class Main extends React.Component {
       <>
         <Route path="/" exact render={() => <Intro handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>} />
         <Route path="/screen/" render={() => <Screen list={this.state.list} />} />
-        <Route path="/screen2" render={() => <Screen2 /> } />
+        <Route path="/screen2" render={() => <Screen2 />} />
       </>
     )
   }
