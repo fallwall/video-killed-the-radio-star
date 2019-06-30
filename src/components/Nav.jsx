@@ -16,7 +16,6 @@ function Nav() {
           pathname: '/screen2',
           state: {
             list: { video80 }
-            
           }
         }}
           >
@@ -25,39 +24,30 @@ function Nav() {
           pathname: '/screen2',
           state: {
             list: { video90 }
-            
           }
         }} 
-          
         >90s</Link>
         <Link to={{
           pathname: '/screen2',
           state: {
             list: { video00 }
-            
           }
         }}
-        
           >00s</Link>
         <Link to={{
           pathname: '/screen2',
           state: {
             list: { video10 }
-            
           }
         }}
-          
         >10s</Link>
         <Link
-          
           to={{
           pathname: '/screen2',
           state: {
             list: { bonustrack }
-            
           }
         }} 
-        
         > <img src={heart} alt="Bonus Track" /></Link>
       </nav>
     </>

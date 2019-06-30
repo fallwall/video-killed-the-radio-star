@@ -32,6 +32,20 @@ class Screen2 extends React.Component {
     }))
   }
 
+  handleClickForward = (ev) => {
+    ev.preventDefault();
+    this.setState(prevState => ({
+      current: prevState.current + 1
+    }))
+  }
+
+  handleClickBackward = (ev) => {
+    ev.preventDefault();
+    this.setState(prevState => ({
+      current: prevState.current - 1
+    }))
+  }
+
   renderVideo = () => {
     return (
       <div className="screen" >
@@ -60,6 +74,8 @@ class Screen2 extends React.Component {
               <div>Loading…</div>
             )
         }
+          <button onClick={this.handleClickBackward}>Previous</button>
+          <button onClick={this.handleClickForward}>Next</button>
       </div>
     )
   }
