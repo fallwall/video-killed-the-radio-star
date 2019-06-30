@@ -6,7 +6,6 @@ import video00 from '../data/video00.json';
 import video10 from '../data/video10.json';
 import bonustrack from '../data/bonustrack.json';
 import heart from '../images/heart.png';
-import { tsPropertySignature } from '@babel/types';
 
 function Nav() {
   return (

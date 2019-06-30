@@ -10,7 +10,6 @@ class Screen2 extends React.Component {
     this.state = {
       list: [],
       current: 0
-
     }
   }
 
@@ -26,6 +25,16 @@ class Screen2 extends React.Component {
     window.location.reload();
   }
 
+
+  // nextSong = () => {
+  //   this.setState(prevState => ({  
+  //     current: prevState.current + 1
+  //   }))
+     
+  // }
+
+  
+  
   render() {
     let urlList;
     if(!this.state.list){
@@ -45,8 +54,11 @@ class Screen2 extends React.Component {
           { 
             this.state.list !== [] &&
             <ReactPlayer
-            playing
-            url={urlList[this.state.current]}
+              playing
+              url={urlList[this.state.current]}
+              onEnded={() => {
+                
+              }}
           />
           }
             
