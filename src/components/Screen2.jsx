@@ -12,9 +12,17 @@ class Screen2 extends React.Component {
     }
   }
 
+  shuffle = (arr) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+  
   componentDidMount() {
-    const testlist = Object.values(this.props.location.state.list);
-    let urlList = testlist[0].map((videoId) => {
+    const testlist = this.shuffle(Object.values(this.props.location.state.list)[0]);
+    let urlList = testlist.map((videoId) => {
       return `https://player.vimeo.com/video/${videoId}`
     });
     this.setState({
@@ -25,6 +33,8 @@ class Screen2 extends React.Component {
   componentWillReceiveProps(nextProps) {
     window.location.reload();
   }
+
+
 
   nextSong = () => {
     this.setState(prevState => ({
