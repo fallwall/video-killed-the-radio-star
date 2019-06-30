@@ -26,12 +26,14 @@ class Screen2 extends React.Component {
   }
 
 
-  // nextSong = () => {
-  //   this.setState(prevState => ({  
-  //     current: prevState.current + 1
-  //   }))
+  nextSong = () => {
+    this.setState(prevState => ({  
+      current: prevState.current + 1
+    }))
+    console.log(this.state.current);
+    this.state.current.forceUpdate();
      
-  // }
+  }
 
   
   
@@ -54,10 +56,11 @@ class Screen2 extends React.Component {
           { 
             this.state.list !== [] &&
             <ReactPlayer
+              className='react-player'
               playing
               url={urlList[this.state.current]}
               onEnded={() => {
-                
+                this.nextSong()
               }}
           />
           }
