@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactPlayer from 'react-player';
 import './Screen.css';
 
 
@@ -8,7 +8,7 @@ class Screen extends React.Component {
     super(props);
     this.state = {
       list: props.list,
-      current: props.list[0]
+      current: 0
     }
   }
 
@@ -30,6 +30,14 @@ class Screen extends React.Component {
 
 
   render() {
+    let urlList;
+    if(!this.state.list){
+      return <div>Loading…</div>;
+      }
+      urlList = this.state.list.map(
+        element => (`https://player.vimeo.com/video/${ element }` ));
+    console.log(urlList);
+
     return (
 
       <div className="screen" >
@@ -43,16 +51,26 @@ class Screen extends React.Component {
               className="video"
               display="initial"
               position="relative" />} */}
+          { 
+            this.state.list !== [] &&
+            <ReactPlayer
+            playing
+            url={urlList[this.state.current]}
+          />
+          }
+            
+         
+          
 
           <button onClick={this.handleClickBackward}>Previous</button>
           <button onClick={this.handleClickForward}>Next</button>
         </div>
       </div>
+            )
+  
 
-    )
-  }
 
-
+}
 }
 
 export default Screen;
