@@ -24,24 +24,12 @@ class Main extends React.Component {
   handleSubmit = async (ev) => {
     ev.preventDefault();
     const responseList = await searchVideo(this.state.userInput);
-    const newList = this.shuffle(responseList);
-    const list = newList.map((element) => element.uri.split("/")[element.uri.split("/").length - 1]);
+    const list = responseList.map((element) => element.uri.split("/")[element.uri.split("/").length - 1]);
     this.setState({
       list: list
     })
     this.props.history.push('/Screen');
   }
-
-
- shuffle = (arr) => {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
- }
-  
-
   
   render() {
     return (

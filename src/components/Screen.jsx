@@ -2,44 +2,65 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import './Screen.css';
 
-
 class Screen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: props.list,
+      list: [],
       current: 0
     }
+    console.log(this.state.list);
   }
 
-
+  componentDidMount() {
+    const testlist = Object.values(this.props.list);
+    let urlList = testlist.map((videoId) => {
+      return `https://player.vimeo.com/video/${videoId}`
+    });
+    this.setState({
+      list: urlList
+    })
+  }
+  nextSong = () => {
+    this.setState(prevState => ({
+      current: prevState.current + 1
+    }))
+  }
 
   handleClickForward = (ev) => {
     ev.preventDefault();
-    const current = this.state.list[this.state.list.indexOf(this.state.list[0]) + 1];
-    this.setState({
-      current: current
-    })
+    this.setState(prevState => ({
+      current: prevState.current + 1
+    }))
   }
 
   handleClickBackward = (ev) => {
     ev.preventDefault();
-    const current = this.state.list[this.state.list.indexOf(this.state.list[0]) - 1];
-    this.setState({
-      current: current
-    })
+    this.setState(prevState => ({
+      current: prevState.current - 1
+    }))
+  }
+
+  renderVideo = () => {
+    return (
+      <div className="screen" >
+        <p> SEARCH RESULT AREA</p>
+        <div className="video-container">
+          <ReactPlayer
+            className='react-player'
+            playing
+            url={this.state.list[this.state.current]}
+            onEnded={() => {
+              this.nextSong()
+            }}
+          />
+        </div>
+      </div>
+    )
   }
 
 
   render() {
-    let urlList;
-    if (!this.state.list) {
-      return <div>Loading…</div>;
-    }
-    urlList = this.state.list.map(
-      element => (`https://player.vimeo.com/video/${element}`));
-    console.log(urlList);
-
     return (
 
       <div className="screen" >
@@ -47,15 +68,12 @@ class Screen extends React.Component {
         <div className="video-container">
 
           {
-            this.state.list !== [] &&
-            <ReactPlayer
-              playing
-              url={urlList[this.state.current]}
-            />
+            this.state.list.length ?
+              this.renderVideo()
+              : (
+                <div>Loading…</div>
+              )
           }
-
-
-
 
           <button onClick={this.handleClickBackward}>Previous</button>
           <button onClick={this.handleClickForward}>Next</button>
