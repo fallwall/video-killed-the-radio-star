@@ -44,7 +44,7 @@ Part 3:
   
 
 **ADDITIONAL LIBRARIES**
-<a href="//github.com/svenanders/react-iframe">react-iframe</a> - to help formating the embedded Vimeo video.
+<a href="https://github.com/CookPete/react-player">react-player</a> - to help formating the embedded Vimeo video.
 react-router-dom
 axios 
 

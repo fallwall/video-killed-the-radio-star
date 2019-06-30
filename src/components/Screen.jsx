@@ -12,7 +12,7 @@ class Screen extends React.Component {
     }
   }
 
- 
+
 
   handleClickForward = (ev) => {
     ev.preventDefault();
@@ -33,46 +33,39 @@ class Screen extends React.Component {
 
   render() {
     let urlList;
-    if(!this.state.list){
+    if (!this.state.list) {
       return <div>Loading…</div>;
-      }
-      urlList = this.state.list.map(
-        element => (`https://player.vimeo.com/video/${ element }` ));
+    }
+    urlList = this.state.list.map(
+      element => (`https://player.vimeo.com/video/${element}`));
     console.log(urlList);
 
     return (
 
       <div className="screen" >
-        <p>{this.props.list}</p>
+
         <div className="video-container">
-            {/* {this.state.list !== [] &&
-            <Iframe url={"https://player.vimeo.com/video/" + this.state.current}
-              width="450px"
-              height="450px"
-              id="video"
-              className="video"
-              display="initial"
-              position="relative" />} */}
-          { 
+
+          {
             this.state.list !== [] &&
             <ReactPlayer
-            playing
-            url={urlList[this.state.current]}
-          />
+              playing
+              url={urlList[this.state.current]}
+            />
           }
-            
-         
-          
+
+
+
 
           <button onClick={this.handleClickBackward}>Previous</button>
           <button onClick={this.handleClickForward}>Next</button>
         </div>
       </div>
-            )
-  
+    )
 
 
-}
+
+  }
 }
 
 export default Screen;
