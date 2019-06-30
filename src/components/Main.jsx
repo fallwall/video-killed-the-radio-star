@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Intro from './Intro';
 import Screen from './Screen';
+import Screen2 from './Screen2';
 import { searchVideo } from '../services/api';
 
 class Main extends React.Component {
@@ -48,7 +49,8 @@ class Main extends React.Component {
     return (
       <>
         <Route path="/" exact render={() => <Intro handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>} />
-        <Route path="/screen" render={() => <Screen list={this.state.list} />} />
+        <Route path="/screen/" render={() => <Screen list={this.state.list} />} />
+        <Route path="/screen2" render={() => <Screen2 /> } />
       </>
     )
   }

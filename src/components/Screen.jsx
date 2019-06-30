@@ -12,6 +12,8 @@ class Screen extends React.Component {
     }
   }
 
+ 
+
   handleClickForward = (ev) => {
     ev.preventDefault();
     const current = this.state.list[this.state.list.indexOf(this.state.list[0]) + 1];
@@ -41,7 +43,7 @@ class Screen extends React.Component {
     return (
 
       <div className="screen" >
-        <p>Something Screen</p>
+        <p>{this.props.list}</p>
         <div className="video-container">
             {/* {this.state.list !== [] &&
             <Iframe url={"https://player.vimeo.com/video/" + this.state.current}
