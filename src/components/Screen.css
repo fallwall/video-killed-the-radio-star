@@ -21,13 +21,13 @@
 .volume-bar {
   position: relative;
   height: 20px;
-  width: 350px;
+  width: 50px;
   border-radius: 50px;
   border: 1px solid black;
 }
 
 .filler {
-  background: grey;
+  background: rgb(204, 204, 204);
   height: 100%;
   border-radius: 50px;
   transition: width .2s ease-in;
