@@ -18,6 +18,13 @@
   border: none; 
 }
 
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  z-index: 20;
+}
+
 .volume-bar {
   position: relative;
   height: 20px;
@@ -29,7 +36,7 @@
 .filler {
   background: rgb(204, 204, 204);
   height: 100%;
-  border-radius: 50px;
+  border-radius: inherit;
   transition: width .2s ease-in;
 }
 

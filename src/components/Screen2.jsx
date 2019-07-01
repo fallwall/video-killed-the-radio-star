@@ -118,12 +118,14 @@ class Screen2 extends React.Component {
               <div>Loading…</div>
             )
         }
+        <div className="controls">
         <button onClick={this.handleClickBackward}>Previous</button>
         <button onClick={this.handleClickForward}>Next</button>
         <Volume volume={this.state.volume} />
         <button onClick={this.volumeUp}>Volume Up</button>
         <button onClick={this.volumeDown}>Volume Down</button>
         <button onClick={this.pause}>Start/Pause</button>
+        </div>
       </div>
     )
   }
