@@ -7,13 +7,39 @@
 
   
 .video-container {
-    position: relative;
+  position: relative;
 }
 
 .react-player {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 60%);
-    border: none; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  border: none; 
+}
+
+.volume-bar {
+  position: relative;
+  height: 20px;
+  width: 350px;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.filler {
+  background: grey;
+  height: 100%;
+  border-radius: 50px;
+  transition: width .2s ease-in;
+}
+
+button {
+  margin-right: 10px;
+  padding: 7px 12px;
+  font-size: 14px;
+  background: black;
+  color: white;
+  font-family: 'Ultra', serif;
+  cursor: pointer;
+  outline: 0;
 }

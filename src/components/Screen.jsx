@@ -1,4 +1,5 @@
 import React from 'react';
+import Volume from './Volume';
 import ReactPlayer from 'react-player';
 import './Screen.css';
 
@@ -7,7 +8,8 @@ class Screen extends React.Component {
     super(props);
     this.state = {
       list: [],
-      current: 0
+      current: 0,
+      volume: 0.1
     }
     console.log(this.state.list);
   }
@@ -50,6 +52,10 @@ class Screen extends React.Component {
             className='react-player'
             playing
             url={this.state.list[this.state.current]}
+            volume={this.state.volume}
+            onError={() => {
+              this.nextSong()
+            }}
             onEnded={() => {
               this.nextSong()
             }}
@@ -58,6 +64,13 @@ class Screen extends React.Component {
       </div>
     )
   }
+
+  volumeUp = () => {
+    // if (this.state.volume === 1) return
+    this.setState(prevState => ({
+      volume: prevState.volume + 0.1
+    }))
+   }
 
 
   render() {
@@ -74,9 +87,10 @@ class Screen extends React.Component {
                 <div>Loading…</div>
               )
           }
-
           <button onClick={this.handleClickBackward}>Previous</button>
           <button onClick={this.handleClickForward}>Next</button>
+          <Volume volume={this.state.volume} />
+          <button onClick={this.volumeUp}>Volume Up</button>
         </div>
       </div>
     )
