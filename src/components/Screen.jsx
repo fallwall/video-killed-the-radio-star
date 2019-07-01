@@ -60,6 +60,15 @@ class Screen extends React.Component {
             onEnded={() => {
               this.nextSong()
             }}
+            config={{
+              vimeo: {
+                playerOptions:
+                {
+                  autoplay: true,
+                  controls: false
+                }
+              }
+            }}
           />
         </div>
       </div>
@@ -72,19 +81,19 @@ class Screen extends React.Component {
       volume: prevState.volume + 0.1
     }))
   }
-  
+
   volumeDown = () => {
     if (this.state.volume === 0) return
     this.setState(prevState => ({
       volume: prevState.volume - 0.1
     }))
   }
-  
+
   pause = () => {
     this.setState(prevState => ({
       playing: !prevState.playing
     }))
-   }
+  }
 
   render() {
     return (
@@ -105,7 +114,7 @@ class Screen extends React.Component {
           <Volume volume={this.state.volume} />
           <button onClick={this.volumeUp}>Volume Up</button>
           <button onClick={this.volumeDown}>Volume Down</button>
-          <button onClick={this.pause}>Pause</button>
+          <button onClick={this.pause}>Start/Pause</button>
         </div>
       </div>
     )
