@@ -1,7 +1,14 @@
+a {
+  font-size: 2em;
+}
+
+a:hover {
+  animation: flashing .25s infinite;
+}
+
 #video80:hover {
   animation: glitch80s .25s infinite;
 }
-
 #video90:hover {
   animation: glitch90s .25s infinite;
 }
@@ -15,43 +22,49 @@
 @keyframes glitch80s {
 0% {color: #3A68CA;}
 20% {color: #CB7CD8;
-transform: scale(2);}
+    font-size: 3em;
+  }
 40% {color: #10E7E2;}
 60% {color: #FE68A8;
-  transform: scale(2);}
+    font-size: 3em;}
 80% {color: #F9EB10;}
-100% {COLOR: #ff2154;}
+100% {color: #ff2154;}
 }
 
 @keyframes glitch90s {
   0% {color: #B13A1A;}
   20% {color: #822C75;
-  transform: scale(2);}
+    font-size: 3em;}
   40% {color: #164DB1;}
   60% {color: #287EA1;
-    transform: scale(2);}
+    font-size: 3em;}
   80% {color: #E4A836;}
-  100% {COLOR: #B2336C;}
+  100% {color: #B2336C;}
   }
 
   @keyframes glitch00s {
     0% {color: #DF19C1;}
     20% {color: #FE6301;
-    transform: scale(2);}
+      font-size: 3em;}
     40% {color: #F0C215;}
     60% {color: #24D513;
-      transform: scale(2);}
+      font-size: 3em;}
     80% {color: #419ADE;}
-    100% {COLOR: #E13157;}
+    100% {color: #E13157;}
     }
 
     @keyframes glitch10s {
       0% {color: #EFB6BF;}
       20% {color: #C86D4E;
-      transform: scale(2);}
+        font-size: 3em;}
       40% {color: #DDDDDD;}
       60% {color: #FE3C71;
-        transform: scale(2);}
+        font-size: 3em;}
       80% {color: #28D666;}
-      100% {COLOR: #0082FE;}
+      100% {color: #0082FE;}
+      }
+
+      @keyframes flashing {
+        20% {font-size: 3em;}
+        60% {font-size: 3em;}
       }

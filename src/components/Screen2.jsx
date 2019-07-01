@@ -22,7 +22,7 @@ class Screen2 extends React.Component {
     }
     return arr;
   }
-  
+
   componentDidMount() {
     const testlist = this.shuffle(Object.values(this.props.location.state.list)[0]);
     let urlList = testlist.map((videoId) => {
@@ -61,52 +61,59 @@ class Screen2 extends React.Component {
 
   renderVideo = () => {
     return (
-    
-       
-        <div className="video-container">
-          <ReactPlayer
-            className='react-player'
-            playing={this.state.playing}
-            url={this.state.list[this.state.current]}
-            volume={this.state.volume}
-            onError={() => {
-              this.nextSong()
-            }}
-            onEnded={() => {
-              this.nextSong()
-            }}
-            config={{
-              vimeo: {
-                playerOptions:
-                {
-                  autoplay: true,
-                  controls: false}
+
+
+      <div className="video-container">
+        <ReactPlayer
+          className='react-player'
+          playing={this.state.playing}
+          url={this.state.list[this.state.current]}
+          volume={this.state.volume}
+          onError={() => {
+            this.nextSong()
+          }}
+          onEnded={() => {
+            this.nextSong()
+          }}
+          config={{
+            vimeo: {
+              playerOptions:
+              {
+                autoplay: true,
+                controls: false
               }
-            }}
-          />
-        </div>
-      
+            }
+          }}
+        />
+      </div>
+
     )
   }
+
   volumeUp = () => {
-    if (this.state.volume === 1) return
-    this.setState(prevState => ({
-      volume: prevState.volume + 0.1
-    }))
+    console.log(this.state.volume);
+    if (this.state.volume < 0.9) {
+      this.setState(prevState => ({
+        volume: prevState.volume + 0.1
+      }))
+    }
   }
-  
+
+
+
   volumeDown = () => {
-    if (this.state.volume === 0) return
-    this.setState(prevState => ({
-      volume: prevState.volume - 0.1
-    }))
+    if (this.state.volume > 0.1) {
+      this.setState(prevState => ({
+        volume: prevState.volume - 0.1
+      }))
+    }
   }
-  
+
   pause = () => {
     this.setState(prevState => ({
       playing: !prevState.playing
     }))
-   }
+  }
 
   render() {
     return (
@@ -119,12 +126,12 @@ class Screen2 extends React.Component {
             )
         }
         <div className="controls">
-        <button onClick={this.handleClickBackward}>Previous</button>
-        <button onClick={this.handleClickForward}>Next</button>
-        <Volume volume={this.state.volume} />
-        <button onClick={this.volumeUp}>Volume Up</button>
-        <button onClick={this.volumeDown}>Volume Down</button>
-        <button onClick={this.pause}>Start/Pause</button>
+          <button onClick={this.handleClickBackward}>Previous</button>
+          <button onClick={this.handleClickForward}>Next</button>
+          <Volume volume={this.state.volume} />
+          <button onClick={this.volumeUp}>Volume Up</button>
+          <button onClick={this.volumeDown}>Volume Down</button>
+          <button onClick={this.pause}>Start/Pause</button>
         </div>
       </div>
     )
