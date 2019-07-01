@@ -80,9 +80,16 @@ class Screen2 extends React.Component {
     )
   }
   volumeUp = () => {
-    // if (this.state.volume === 1) return
+    if (this.state.volume === 1) return
     this.setState(prevState => ({
       volume: prevState.volume + 0.1
+    }))
+  }
+  
+  volumeDown = () => {
+    if (this.state.volume === 0) return
+    this.setState(prevState => ({
+      volume: prevState.volume - 0.1
     }))
    }
 
@@ -100,6 +107,7 @@ class Screen2 extends React.Component {
         <button onClick={this.handleClickForward}>Next</button>
         <Volume volume={this.state.volume} />
         <button onClick={this.volumeUp}>Volume Up</button>
+        <button onClick={this.volumeDown}>Volume Down</button>
       </div>
     )
   }
