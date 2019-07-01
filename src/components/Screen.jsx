@@ -46,8 +46,8 @@ class Screen extends React.Component {
 
   renderVideo = () => {
     return (
-      <div className="screen" >
-        <p> SEARCH RESULT AREA</p>
+      
+       
         <div className="video-container">
           <ReactPlayer
             className='react-player'
@@ -71,7 +71,6 @@ class Screen extends React.Component {
             }}
           />
         </div>
-      </div>
     )
   }
 
@@ -100,8 +99,6 @@ class Screen extends React.Component {
 
       <div className="screen" >
 
-        <div className="video-container">
-
           {
             this.state.list.length ?
               this.renderVideo()
@@ -109,7 +106,8 @@ class Screen extends React.Component {
                 <div>Loading…</div>
               )
           }
-          <div className="controls">
+          
+        <div className="controls">
           <button onClick={this.handleClickBackward}>Previous</button>
           <button onClick={this.handleClickForward}>Next</button>
           <Volume volume={this.state.volume} />
@@ -117,7 +115,6 @@ class Screen extends React.Component {
           <button onClick={this.volumeDown}>Volume Down</button>
           <button onClick={this.pause}>Start/Pause</button>
           </div>
-        </div>
       </div>
     )
 

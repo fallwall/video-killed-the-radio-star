@@ -61,8 +61,8 @@ class Screen2 extends React.Component {
 
   renderVideo = () => {
     return (
-      <div className="screen" >
-        <p> THIS IS SCREEN2 TEST AREA</p>
+    
+       
         <div className="video-container">
           <ReactPlayer
             className='react-player'
@@ -85,7 +85,7 @@ class Screen2 extends React.Component {
             }}
           />
         </div>
-      </div>
+      
     )
   }
   volumeUp = () => {
@@ -110,7 +110,7 @@ class Screen2 extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="screen">
         {
           this.state.list.length ?
             this.renderVideo()

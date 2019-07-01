@@ -1,5 +1,6 @@
 .screen {
   height: 100vh;
+  position: relative;
   background-image: url("../images/screenbackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,18 +8,20 @@
 
   
 .video-container {
-  position: relative;
-}
-
-.react-player {
-  position: absolute;
+  position: absolute; 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 60%);
+  transform: translate(-40%, -10%);
   border: none; 
 }
 
+
 .controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(180%, 10%);
+  border: none; 
   display: flex;
   flex-direction: column;
   width: 150px;
@@ -34,7 +37,7 @@
 }
 
 .filler {
-  background: rgb(204, 204, 204);
+  background: rgb(204, 204, 204, 0.6);
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
