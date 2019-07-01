@@ -50,7 +50,7 @@ react-router-dom
 <br />
 axios 
 <br />
-<a href="https://juiceboxinteractive.com/blog/color/">Color Selection Referencec</a>
+<a href="https://juiceboxinteractive.com/blog/color/">Color Selection Reference</a>
 
 
 **ISSUES & RESOLUTION**

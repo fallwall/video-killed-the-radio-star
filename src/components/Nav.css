@@ -1,12 +1,57 @@
-#video80s a:hover {
+#video80:hover {
   animation: glitch80s .25s infinite;
+}
+
+#video90:hover {
+  animation: glitch90s .25s infinite;
+}
+#video00:hover {
+  animation: glitch00s .25s infinite;
+}
+#video10:hover {
+  animation: glitch10s .25s infinite;
 }
 
 @keyframes glitch80s {
 0% {color: #3A68CA;}
-20% {color: #CB7CD8;}
+20% {color: #CB7CD8;
+transform: scale(2);}
 40% {color: #10E7E2;}
-60% {color: #FE68A8;}
+60% {color: #FE68A8;
+  transform: scale(2);}
 80% {color: #F9EB10;}
 100% {COLOR: #ff2154;}
 }
+
+@keyframes glitch90s {
+  0% {color: #B13A1A;}
+  20% {color: #822C75;
+  transform: scale(2);}
+  40% {color: #164DB1;}
+  60% {color: #287EA1;
+    transform: scale(2);}
+  80% {color: #E4A836;}
+  100% {COLOR: #B2336C;}
+  }
+
+  @keyframes glitch00s {
+    0% {color: #DF19C1;}
+    20% {color: #FE6301;
+    transform: scale(2);}
+    40% {color: #F0C215;}
+    60% {color: #24D513;
+      transform: scale(2);}
+    80% {color: #419ADE;}
+    100% {COLOR: #E13157;}
+    }
+
+    @keyframes glitch10s {
+      0% {color: #EFB6BF;}
+      20% {color: #C86D4E;
+      transform: scale(2);}
+      40% {color: #DDDDDD;}
+      60% {color: #FE3C71;
+        transform: scale(2);}
+      80% {color: #28D666;}
+      100% {COLOR: #0082FE;}
+      }
