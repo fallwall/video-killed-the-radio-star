@@ -6,6 +6,7 @@ import video00 from '../data/video00.json';
 import video10 from '../data/video10.json';
 import bonustrack from '../data/bonustrack.json';
 import heart from '../images/heart.png';
+import './Nav.css';
 
 
 function Nav() {
@@ -13,7 +14,8 @@ function Nav() {
     <>
       <nav>
         <Link to="/" >Home</Link>
-        <Link to={{
+        <Link id="video80"
+          to={{
           pathname: '/screen2',
           state: {
             list: { video80 }
@@ -21,7 +23,8 @@ function Nav() {
         }}
         >
           80s</Link>
-        <Link to={{
+        <Link id="video90"
+          to={{
           pathname: '/screen2',
           state: {
             list: { video90 }
@@ -29,7 +32,8 @@ function Nav() {
         }}
         >
           90s</Link>
-        <Link to={{
+        <Link id="video00"
+          to={{
           pathname: '/screen2',
           state: {
             list: { video00 }
@@ -37,7 +41,8 @@ function Nav() {
         }}
         >
           00s</Link>
-        <Link to={{
+        <Link id="video10"
+          to={{
           pathname: '/screen2',
           state: {
             list: { video10 }

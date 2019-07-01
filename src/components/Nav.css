@@ -1,0 +1,12 @@
+#video80s a:hover {
+  animation: glitch80s .25s infinite;
+}
+
+@keyframes glitch80s {
+0% {color: #3A68CA;}
+20% {color: #CB7CD8;}
+40% {color: #10E7E2;}
+60% {color: #FE68A8;}
+80% {color: #F9EB10;}
+100% {COLOR: #ff2154;}
+}
