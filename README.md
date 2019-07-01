@@ -45,8 +45,13 @@ Part 3:
 
 **ADDITIONAL LIBRARIES**
 <a href="https://github.com/CookPete/react-player">react-player</a> - to help formating the embedded Vimeo video.
+<br />
 react-router-dom
+<br />
 axios 
+<br />
+<a href="https://juiceboxinteractive.com/blog/color/">Color Selection Referencec</a>
+
 
 **ISSUES & RESOLUTION**
 To be updated.
