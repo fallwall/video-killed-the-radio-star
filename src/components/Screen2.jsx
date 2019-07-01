@@ -10,7 +10,8 @@ class Screen2 extends React.Component {
     this.state = {
       list: [],
       current: 0,
-      volume: 0.1
+      volume: 0.1,
+      playing: false
     }
   }
 
@@ -65,7 +66,7 @@ class Screen2 extends React.Component {
         <div className="video-container">
           <ReactPlayer
             className='react-player'
-            playing
+            playing={this.state.playing}
             url={this.state.list[this.state.current]}
             volume={this.state.volume}
             onError={() => {
@@ -91,6 +92,12 @@ class Screen2 extends React.Component {
     this.setState(prevState => ({
       volume: prevState.volume - 0.1
     }))
+  }
+  
+  pause = () => {
+    this.setState(prevState => ({
+      playing: !prevState.playing
+    }))
    }
 
   render() {
@@ -108,6 +115,7 @@ class Screen2 extends React.Component {
         <Volume volume={this.state.volume} />
         <button onClick={this.volumeUp}>Volume Up</button>
         <button onClick={this.volumeDown}>Volume Down</button>
+        <button onClick={this.pause}>Pause</button>
       </div>
     )
   }
