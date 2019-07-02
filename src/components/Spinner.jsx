@@ -6,11 +6,6 @@ import disk from '../images/rotatingrecord.gif';
 import { withRouter, Redirect } from 'react-router-dom';
 import "./Spinner.css";
 
-
-
-
-
-
 class Spinner extends React.Component {
   constructor() {
     super();

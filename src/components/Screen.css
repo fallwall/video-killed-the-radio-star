@@ -5,6 +5,12 @@
   background-repeat: no-repeat;
 }
 
+.react-player {
+    width: 500px;
+    height: 483px;
+    /* margin-bottom: 250px; */
+}
+
 #temp-screen {
   position: absolute; 
   top: 50%;

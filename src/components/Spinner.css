@@ -22,7 +22,7 @@ height: 100%;
   color: white;
   z-index: 5;
   font-size:3em;
-  transform: translate(250%,500%);
+  transform: translate(200%,500%);
 }
 .input-area {
   position: absolute;

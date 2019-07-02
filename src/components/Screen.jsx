@@ -87,8 +87,8 @@ class Screen extends React.Component {
           onEnded={() => {
             this.nextSong()
           }}
-          width="800px"
-          height="490px"
+          width="500px"
+          height="483px"
           config={{
             vimeo: {
               playerOptions:
