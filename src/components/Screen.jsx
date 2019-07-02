@@ -1,12 +1,9 @@
 import React from 'react';
 import Volume from './Volume';
 import ReactPlayer from 'react-player';
-import { withRouter } from 'react-router-dom';
 import './Screen.css';
 
-
-
-class Screen extends React.Component {
+export default class Screen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,21 +23,10 @@ class Screen extends React.Component {
   }
 
   componentDidMount() {
-    // const previousPath = Object.keys(this.props.location.state.list)[0];
-    // const urlList = "";
-    // if (previousPath == "video80" || previousPath == "video90" || previousPath == "video00" || previousPath == "video10" || previousPath == "bonustrack") {
-    //   const testlist = this.shuffle(Object.values(this.props.location.state.list)[0]);
-    //   urlList = testlist.map((videoId) => {
-    //     return `https://player.vimeo.com/video/${videoId}`
-    //   });
-
-    // } else { 
     const testlist = this.shuffle(this.props.list);
     let urlList = testlist.map((videoId) => {
       return `https://player.vimeo.com/video/${videoId}`
     });
-
-    // }
 
     this.setState({
       list: urlList
@@ -72,8 +58,6 @@ class Screen extends React.Component {
 
   renderVideo = () => {
     return (
-
-
       <div className="video-container">
 
         <ReactPlayer
@@ -154,10 +138,5 @@ class Screen extends React.Component {
         </div>
       </div>
     )
-
-
-
   }
 }
-
-export default withRouter(Screen);
