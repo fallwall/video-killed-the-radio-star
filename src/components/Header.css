@@ -1,3 +1,7 @@
+header {
+
+}
+
 header h1 {
   color: black;
 }
@@ -7,18 +11,9 @@ header nav a {
   margin: 2em;
 }
 
-header nav img, footer img {
+header nav img {
   height: 1em;
   width: 1em;
-}
-
-
-
-
-
-
-a {
-  font-size: 2em;
 }
 
 a:hover {
@@ -54,11 +49,11 @@ a:hover {
 @keyframes glitch80s {
   0% {color: #3A68CA;}
   20% {color: #CB7CD8;
-      font-size: 3em;
+      font-size: 2.1em;
     }
   40% {color: #10E7E2;}
   60% {color: #FE68A8;
-      font-size: 3em;}
+      font-size: 2.1em;}
   80% {color: #F9EB10;}
   100% {color: #ff2154;}
   }
@@ -66,10 +61,10 @@ a:hover {
   @keyframes glitch90s {
     0% {color: #B13A1A;}
     20% {color: #822C75;
-      font-size: 3em;}
+      font-size: 2.1em;}
     40% {color: #164DB1;}
     60% {color: #287EA1;
-      font-size: 3em;}
+      font-size: 2.1em;}
     80% {color: #E4A836;}
     100% {color: #B2336C;}
     }
@@ -77,10 +72,10 @@ a:hover {
     @keyframes glitch00s {
       0% {color: #DF19C1;}
       20% {color: #FE6301;
-        font-size: 3em;}
+        font-size: 2.1em;}
       40% {color: #F0C215;}
       60% {color: #24D513;
-        font-size: 3em;}
+        font-size: 2.1em;}
       80% {color: #419ADE;}
       100% {color: #E13157;}
       }
@@ -88,19 +83,19 @@ a:hover {
       @keyframes glitch10s {
         0% {color: #EFB6BF;}
         20% {color: #C86D4E;
-          font-size: 3em;}
+          font-size: 2.1em;}
         40% {color: #DDDDDD;}
         60% {color: #FE3C71;
-          font-size: 3em;}
+          font-size: 2.1em;}
         80% {color: #28D666;}
         100% {color: #0082FE;}
         }
   
         @keyframes flashing {
-          20% {font-size: 3em;}
-          60% {font-size: 3em;}
+          20% {font-size: 2.1em;}
+          60% {font-size: 2.1em;}
         }
         @keyframes flashing {
-          20% {font-size: 3em;}
-          60% {font-size: 3em;}
+          20% {font-size: 2.1em;}
+          60% {font-size: 2.1em;}
         }
