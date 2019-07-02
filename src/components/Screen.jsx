@@ -112,7 +112,7 @@ class Screen extends React.Component {
             this.state.list.length ?
               this.renderVideo()
               : (
-                <div>Loading…</div>
+                <img id="temp-screen" src="https://media.giphy.com/media/LmWnCBTOGUmw8/giphy.gif" alt="temp static" />
               )
           }
           

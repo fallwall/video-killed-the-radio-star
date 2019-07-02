@@ -19,7 +19,7 @@ export default function Spinner(props) {
   return (
 
     <div className="spinner">
-      <div className=".container">
+      <div className="spinner-container">
         <Prompt />
         <Search handleChange={props.handleChange} handleSubmit={props.handleSubmit} />
         <div className="disk">

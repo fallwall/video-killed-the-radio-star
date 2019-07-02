@@ -33,25 +33,15 @@
   visibility:hidden;
 }
 
-header {
-  top: 0;
-  height: 10vh; 
-  width:100%;
-  z-index: 1200;
-}
 
-header h1 {
-  color: black;
-}
-header nav a {
-  text-decoration: none;
-  color:black;
-  margin: 2em;
-}
-
-header nav img, footer img {
+footer img {
   height: 1em;
   width: 1em;
+}
+
+footer {
+  bottom: 0;
+  z-index:5;
 }
 
 input {

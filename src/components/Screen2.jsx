@@ -75,8 +75,8 @@ class Screen2 extends React.Component {
           onEnded={() => {
             this.nextSong()
           }}
-          width="740px"
-          height="400px"
+          width="800px"
+          height="490px"
           config={{
             vimeo: {
               playerOptions:
@@ -119,23 +119,31 @@ class Screen2 extends React.Component {
 
   render() {
     return (
-      <div className="screen">
-        <div className="screen-overlay"></div>
-        {
-          this.state.list.length ?
-            this.renderVideo()
-            : (
-              <div>Loading…</div>
-            )
-        }
-        <div className="controls">
-          <button onClick={this.handleClickBackward}>Previous</button>
-          <button onClick={this.handleClickForward}>Next</button>
-          <Volume volume={this.state.volume} />
-          <button onClick={this.volumeUp}>Volume Up</button>
-          <button onClick={this.volumeDown}>Volume Down</button>
-          <button onClick={this.pause}>Start/Pause</button>
-        </div>
+    
+    <div className="screen" >
+    <div className="screen-cover" >
+    <div className="screen-overlay">
+    
+     </div>
+
+      {
+        this.state.list.length ?
+          this.renderVideo()
+          : (
+            <img id="temp-screen" src="https://media.giphy.com/media/LmWnCBTOGUmw8/giphy.gif" alt="temp static" />
+          )
+      }
+      
+    <div className="controls">
+      <button onClick={this.handleClickBackward}>Previous</button>
+      <button onClick={this.handleClickForward}>Next</button>
+      <Volume volume={this.state.volume} />
+      <button onClick={this.volumeUp}>Volume Up</button>
+      <button onClick={this.volumeDown}>Volume Down</button>
+      <button onClick={this.pause}>Start/Pause</button>
+      </div>
+    
+    </div>
       </div>
     )
   }
