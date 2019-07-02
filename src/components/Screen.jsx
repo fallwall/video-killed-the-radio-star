@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player';
 import './Screen.css';
 
 
+
 class Screen extends React.Component {
   constructor(props) {
     super(props);
@@ -49,7 +50,8 @@ class Screen extends React.Component {
     return (
       
        
-        <div className="video-container">
+      <div className="video-container">
+
           <ReactPlayer
             className='react-player'
             playing={this.state.playing}
@@ -61,6 +63,8 @@ class Screen extends React.Component {
             onEnded={() => {
               this.nextSong()
             }}
+            width="800px"
+            height="490px"
             config={{
               vimeo: {
                 playerOptions:
@@ -99,6 +103,7 @@ class Screen extends React.Component {
     return (
 
       <div className="screen" >
+        <div className="screen-cover" >
         <div className="screen-overlay">
         
          </div>
@@ -119,6 +124,8 @@ class Screen extends React.Component {
           <button onClick={this.volumeDown}>Volume Down</button>
           <button onClick={this.pause}>Start/Pause</button>
           </div>
+        
+        </div>
       </div>
     )
 

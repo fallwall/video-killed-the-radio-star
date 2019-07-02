@@ -75,6 +75,8 @@ class Screen2 extends React.Component {
           onEnded={() => {
             this.nextSong()
           }}
+          width="740px"
+          height="400px"
           config={{
             vimeo: {
               playerOptions:
