@@ -4,6 +4,8 @@ import Intro from './Intro';
 import Screen from './Screen';
 import Screen2 from './Screen2';
 import { searchVideo } from '../services/api';
+import playlists from '../data/playlists.json';
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -30,13 +32,17 @@ class Main extends React.Component {
     })
     this.props.history.push('/Screen');
   }
-  
+
   render() {
     return (
       <>
-        <Route path="/" exact render={() => <Intro handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>} />
-        <Route path="/screen/" render={() => <Screen list={this.state.list} />} />
-        <Route path="/screen2" render={() => <Screen2 />} />
+        <Route path="/" exact render={() => <Intro handleChange={this.handleChange} handleSubmit={this.handleSubmit} />} />
+        <Route exact path="/screen/" render={() => <Screen list={this.state.list} />} />
+        <Route path="/screen/:playlist" render={(props) => {
+          const list = playlists[props.match.params.playlist]
+          debugger;
+          return <Screen list={list} />
+        }} />
       </>
     )
   }
