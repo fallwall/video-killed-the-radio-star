@@ -3,6 +3,7 @@ import Volume from './Volume';
 import ReactPlayer from 'react-player';
 import './Screen.css';
 
+
 class Screen extends React.Component {
   constructor(props) {
     super(props);
@@ -98,6 +99,9 @@ class Screen extends React.Component {
     return (
 
       <div className="screen" >
+        <div className="screen-overlay">
+        
+         </div>
 
           {
             this.state.list.length ?

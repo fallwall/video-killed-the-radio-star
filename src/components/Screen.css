@@ -55,3 +55,33 @@ button {
   cursor: pointer;
   outline: 0;
 }
+
+.screen-overlay{
+  opacity:0.1;
+  background-color: rgba(255, 255, 255, 0.0000000001);
+  background-blend-mode: lighten;
+  background-image: url(https://media.giphy.com/media/pyqqSHqdekwVi/giphy.gif);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:1;
+}
+
+
+/* .screen-overlay::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;   
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.giphy.com/media/pyqqSHqdekwVi/giphy.gif');
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+} */

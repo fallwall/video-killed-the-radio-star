@@ -118,6 +118,7 @@ class Screen2 extends React.Component {
   render() {
     return (
       <div className="screen">
+        <div className="screen-overlay"></div>
         {
           this.state.list.length ?
             this.renderVideo()
