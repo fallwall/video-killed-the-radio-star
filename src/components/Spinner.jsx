@@ -1,4 +1,5 @@
 import React from 'react';
+import Prompt from './Prompt';
 import staticDisk from '../images/still_rotatingrecord.png';
 import disk from '../images/rotatingrecord.gif';
 import "./Spinner.css";
@@ -17,12 +18,13 @@ export default function Spinner() {
   return (
 
     <div className="spinner">
-      <p>Spinner</p>
-      <div className="disk">
+      <div className=".container">
+        <Prompt />
+        <div className="disk">
         <img src={staticDisk} alt="Spinning record" onClick={movingDisk} />
       </div>
 
-      <div className=".container">
+      
       </div>
 
     </div>
