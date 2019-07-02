@@ -39,7 +39,6 @@ class Main extends React.Component {
         <Route exact path="/screen/" render={() => <Screen list={this.state.list} />} />
         <Route path="/screen/:playlist" render={(props) => {
           const list = playlists[props.match.params.playlist]
-          debugger;
           return <Screen list={list} />
         }} />
       </>

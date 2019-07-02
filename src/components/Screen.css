@@ -33,13 +33,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(180%, -40%);
+  transform: translate(180%, -25%);
   border: none; 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 150px;
   z-index: 20;
+}
+
+.controls button {
+  margin: 2em 0;
 }
 
 .volume-bar {

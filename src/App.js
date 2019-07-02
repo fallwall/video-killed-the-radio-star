@@ -13,7 +13,7 @@ const removeTimer = () => {
 class App extends React.Component {
 
   componentDidMount() {
-    setTimeout(() => {removeTimer()}, 5000);
+    setTimeout(() => {removeTimer()}, 3000);
   }
   
   render() {

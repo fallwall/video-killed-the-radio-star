@@ -1,6 +1,4 @@
-header {
 
-}
 
 header h1 {
   color: black;
@@ -46,49 +44,51 @@ a:hover {
   animation: glitch10s .25s infinite;
 }
 
+/* text-shadow: 4px 4px #FF0000; */
+
 @keyframes glitch80s {
-  0% {color: #3A68CA;}
-  20% {color: #CB7CD8;
+  0% {text-shadow: 4px 4px #3A68CA;}
+  20% {text-shadow: 4px 4px #CB7CD8;
       font-size: 2.1em;
     }
-  40% {color: #10E7E2;}
-  60% {color: #FE68A8;
+  40% {text-shadow: 4px 4px #10E7E2;}
+  60% {text-shadow: 4px 4px #FE68A8;
       font-size: 2.1em;}
-  80% {color: #F9EB10;}
-  100% {color: #ff2154;}
+  80% {text-shadow: 4px 4px #F9EB10;}
+  100% {text-shadow: 4px 4px #ff2154;}
   }
   
   @keyframes glitch90s {
-    0% {color: #B13A1A;}
-    20% {color: #822C75;
+    0% {text-shadow: 4px 4px #B13A1A;}
+    20% {text-shadow: 4px 4px #822C75;
       font-size: 2.1em;}
-    40% {color: #164DB1;}
-    60% {color: #287EA1;
+    40% {text-shadow: 4px 4px #164DB1;}
+    60% {text-shadow: 4px 4px #287EA1;
       font-size: 2.1em;}
-    80% {color: #E4A836;}
-    100% {color: #B2336C;}
+    80% {text-shadow: 4px 4px #E4A836;}
+    100% {text-shadow: 4px 4px #B2336C;}
     }
   
     @keyframes glitch00s {
-      0% {color: #DF19C1;}
-      20% {color: #FE6301;
+      0% {text-shadow: 4px 4px #DF19C1;}
+      20% {text-shadow: 4px 4px #FE6301;
         font-size: 2.1em;}
-      40% {color: #F0C215;}
-      60% {color: #24D513;
+      40% {text-shadow: 4px 4px #F0C215;}
+      60% {text-shadow: 4px 4px #24D513;
         font-size: 2.1em;}
-      80% {color: #419ADE;}
-      100% {color: #E13157;}
+      80% {text-shadow: 4px 4px #419ADE;}
+      100% {text-shadow: 4px 4px #E13157;}
       }
   
       @keyframes glitch10s {
-        0% {color: #EFB6BF;}
-        20% {color: #C86D4E;
+        0% {text-shadow: 4px 4px #EFB6BF;}
+        20% {text-shadow: 4px 4px #C86D4E;
           font-size: 2.1em;}
-        40% {color: #DDDDDD;}
-        60% {color: #FE3C71;
+        40% {text-shadow: 4px 4px #DDDDDD;}
+        60% {text-shadow: 4px 4px #FE3C71;
           font-size: 2.1em;}
-        80% {color: #28D666;}
-        100% {color: #0082FE;}
+        80% {text-shadow: 4px 4px #28D666;}
+        100% {text-shadow: 4px 4px #0082FE;}
         }
   
         @keyframes flashing {

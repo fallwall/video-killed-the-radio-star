@@ -146,8 +146,8 @@ class Screen extends React.Component {
             <button onClick={this.handleClickBackward}>Previous</button>
             <button onClick={this.handleClickForward}>Next</button>
             <Volume volume={this.state.volume} />
-            <button onClick={this.volumeUp}>Volume Up</button>
-            <button onClick={this.volumeDown}>Volume Down</button>
+            <button onClick={this.volumeUp}>Volume ++</button>
+            <button onClick={this.volumeDown}>Volume --</button>
             <button onClick={this.pause}>Start/Pause</button>
           </div>
 
