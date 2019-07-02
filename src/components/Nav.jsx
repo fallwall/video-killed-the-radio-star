@@ -3,10 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import heart from '../images/heart.png';
 import './Header.css';
 
-
-
 function Nav() {
-
   return (
     <>
       <nav>

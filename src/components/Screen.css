@@ -32,7 +32,7 @@
   transform: translate(-58.5%, -28%);
   width: 30%;
   display: flex;
-  z-index: -1
+  z-index: -1;
 }
 
 .controls {
@@ -48,10 +48,6 @@
   z-index: 20;
 }
 
-.controls button {
-  margin: 2em 0;
-}
-
 .volume-bar {
   position: relative;
   height: 20px;
@@ -60,11 +56,19 @@
   border: 1px solid black;
 }
 
+.volume-bar-hidden {
+  visibility: hidden;
+}
+
 .filler {
   background: rgb(204, 204, 204, 0.6);
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
+}
+
+.filter-hidden {
+  visibility: hidden;
 }
 
 button {
@@ -76,6 +80,23 @@ button {
   font-family: 'Ultra', serif;
   cursor: pointer;
   outline: 0;
+}
+
+.controls button {
+  margin: 2em 0;
+}
+
+.controls button:hover {
+  border: none;
+  height: 1px;
+  width: 1px;
+  color: grey;
+  background: grey;
+  border-radius: 50%;
+}
+
+.controls button:hover span {
+  display:none;
 }
 
 .screen-overlay{

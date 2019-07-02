@@ -10,7 +10,8 @@ export default class Screen extends React.Component {
       list: [],
       current: 0,
       volume: 0.1,
-      playing: false
+      playing: false,
+      mouseOnVolume: false
     }
   }
 
@@ -27,7 +28,6 @@ export default class Screen extends React.Component {
     let urlList = testlist.map((videoId) => {
       return `https://player.vimeo.com/video/${videoId}`
     });
-
     this.setState({
       list: urlList
     })
@@ -109,6 +109,20 @@ export default class Screen extends React.Component {
     }))
   }
 
+
+  //mouse enter/leave volume button >> volume bar appear/disappear
+  handleMouseEnter = () => {
+    this.setState({
+      mouseOnVolume: true
+    })
+  }
+  
+  handleMouseLeave = () => {
+    this.setState({
+      mouseOnVolume: false
+    })
+   }
+
   render() {
     return (
 
@@ -127,12 +141,18 @@ export default class Screen extends React.Component {
           }
 
           <div className="controls">
-            <button onClick={this.handleClickBackward}>Previous</button>
-            <button onClick={this.handleClickForward}>Next</button>
-            <Volume volume={this.state.volume} />
-            <button onClick={this.volumeUp}>Volume ++</button>
-            <button onClick={this.volumeDown}>Volume --</button>
-            <button onClick={this.pause}>Start/Pause</button>
+            <button onClick={this.handleClickBackward}><span>Previous</span></button>
+            <button onClick={this.handleClickForward}><span>Next</span></button>
+            {this.state.mouseOnVolume &&
+              <Volume volume={this.state.volume} />}
+            <button
+              onClick={this.volumeUp}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}>
+              <span>Vol ++</span>
+            </button>
+            <button onClick={this.volumeDown}><span>Vol --</span></button>
+            <button onClick={this.pause}><span>Start/Pause</span></button>
           </div>
 
         </div>

@@ -3,12 +3,21 @@ import Search from './Search';
 import Prompt from './Prompt';
 import staticDisk from '../images/still_rotatingrecord.png';
 import disk from '../images/rotatingrecord.gif';
-import { withRouter, Redirect } from 'react-router-dom';
+import {Redirect } from 'react-router-dom';
 import "./Spinner.css";
 
-class Spinner extends React.Component {
-  constructor() {
-    super();
+//below is for spinner random redirection
+const index = Math.floor(Math.random() * 4);
+const era = [
+  '/screen/video80',
+  '/screen/video90',
+  '/screen/video00',
+  '/screen/video10'];
+const randomEra = era[index];
+
+export default class Spinner extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       redirect: false
     }
@@ -16,9 +25,11 @@ class Spinner extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/screen/video90' />
+      return <Redirect to={randomEra} />
     }
   }
+
+  //below is to set disk image into moving upon click and reverse
   movingDisk = (ev) => {
     const status = ev.target.getAttribute("src");
     if (status === `${staticDisk}`) {
@@ -32,6 +43,7 @@ class Spinner extends React.Component {
       }, 3000);
     }
   }
+
   render() {
     return (
       <>
@@ -43,14 +55,9 @@ class Spinner extends React.Component {
             <div className="disk">
               <img src={staticDisk} alt="Spinning record" onClick={this.movingDisk} />
             </div>
-
-
           </div>
-
         </div>
       </>
     )
   }
 }
-
-export default withRouter(Spinner);
