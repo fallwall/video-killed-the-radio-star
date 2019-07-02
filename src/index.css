@@ -13,11 +13,12 @@ code {
 }
 
 
-html { 
+/* html { 
+  background-color: black;
   background:  url("./images/M2gO.gif"); 
   background-repeat: repeat;
   z-index:20;
-}
+} */
 
 
 

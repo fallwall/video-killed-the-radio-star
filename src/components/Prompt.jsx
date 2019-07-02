@@ -22,7 +22,7 @@ export default class Prompt extends React.Component {
   render() {
     return (
       <>
-        <p>{this.state.msg} </p>
+        <div className="messages">{this.state.msg} </div>
       </>
     )
   }

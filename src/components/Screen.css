@@ -1,5 +1,6 @@
 .screen {
-  height: 100vh;
+  top: 4em; 
+  height: 95vh;
   position: relative;
   background-image: url("../images/screenbackground.jpg");
   background-size: cover;
@@ -12,13 +13,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: black solid 20px; 
-  border-radius: 20px;
   width: 30%;
   display: flex;
 }
-
-
 
 
 .controls {
@@ -57,8 +54,4 @@ button {
   font-family: 'Ultra', serif;
   cursor: pointer;
   outline: 0;
-}
-
-.video80 {
-  color:red;
 }

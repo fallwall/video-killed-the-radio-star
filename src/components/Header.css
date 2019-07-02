@@ -1,3 +1,23 @@
+a {
+  font-size: 2em;
+}
+
+a:hover {
+  animation: flashing .25s infinite;
+}
+
+#video80:hover {
+  animation: glitch80s .25s infinite;
+}
+#video90:hover {
+  animation: glitch90s .25s infinite;
+}
+#video00:hover {
+  animation: glitch00s .25s infinite;
+}
+#video10:hover {
+  animation: glitch10s .25s infinite;
+}
 
 .glitch80s {
     animation: glitch80s .25s infinite;
@@ -57,6 +77,10 @@
         100% {color: #0082FE;}
         }
   
+        @keyframes flashing {
+          20% {font-size: 3em;}
+          60% {font-size: 3em;}
+        }
         @keyframes flashing {
           20% {font-size: 3em;}
           60% {font-size: 3em;}
