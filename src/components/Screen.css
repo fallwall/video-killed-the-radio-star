@@ -11,9 +11,13 @@
   position: absolute; 
   top: 50%;
   left: 50%;
-  transform: translate(-40%, -10%);
-  border: none; 
+  transform: translate(-70%, -20%);
+  border: black solid 20px; 
+  border-radius: 20px;
+  width: 30%;
 }
+
+
 
 
 .controls {
