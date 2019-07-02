@@ -2,18 +2,19 @@ import React from 'react';
 import messages from '../data/messages.json';
 
 export default class Prompt extends React.Component {
-  constructor() { 
+  constructor() {
     super();
     this.state = {
-      prompt: Object.values({ messages })
+      prompt: { messages }.messages,
+      msg: ""
     }
   }
 
   componentDidMount() {
     setInterval(() => {
-      const prompt = this.state.prompt[Math.floor(Math.random() * this.state.prompt.length)];
+      const msg = this.state.prompt[Math.floor(Math.random() * this.state.prompt.length)];
       this.setState({
-        prompt: prompt
+        msg: msg
       })
     }, 3000)
   }
@@ -21,10 +22,10 @@ export default class Prompt extends React.Component {
   render() {
     return (
       <>
-        
-        <p>{this.state.prompt} </p>
-    </>
-    )}
-  
+        <p>{this.state.msg} </p>
+      </>
+    )
+  }
+
 
 }
