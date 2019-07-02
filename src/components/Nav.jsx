@@ -1,10 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import video80 from '../data/video80.json';
-import video90 from '../data/video90.json';
-import video00 from '../data/video00.json';
-import video10 from '../data/video10.json';
-import bonustrack from '../data/bonustrack.json';
 import heart from '../images/heart.png';
 import './Header.css';
 

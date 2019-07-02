@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Intro from './Intro';
 import Screen from './Screen';
-import Screen2 from './Screen2';
 import { searchVideo } from '../services/api';
 import playlists from '../data/playlists.json';
 

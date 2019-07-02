@@ -54,16 +54,20 @@ class Screen extends React.Component {
 
   handleClickForward = (ev) => {
     ev.preventDefault();
-    this.setState(prevState => ({
-      current: prevState.current + 1
-    }))
+    if (this.state.current < this.state.list.length) {
+      this.setState(prevState => ({
+        current: prevState.current + 1
+      }))
+    }
   }
 
   handleClickBackward = (ev) => {
     ev.preventDefault();
-    this.setState(prevState => ({
-      current: prevState.current - 1
-    }))
+    if (this.state.current > 0) {
+      this.setState(prevState => ({
+        current: prevState.current - 1
+      }))
+    }
   }
 
   renderVideo = () => {
@@ -100,17 +104,19 @@ class Screen extends React.Component {
   }
 
   volumeUp = () => {
-    if (this.state.volume === 1) return
-    this.setState(prevState => ({
-      volume: prevState.volume + 0.1
-    }))
+    if (this.state.volume < 0.9) {
+      this.setState(prevState => ({
+        volume: prevState.volume + 0.1
+      }))
+    }
   }
 
   volumeDown = () => {
-    if (this.state.volume === 0) return
-    this.setState(prevState => ({
-      volume: prevState.volume - 0.1
-    }))
+    if (this.state.volume > 0.1) {
+      this.setState(prevState => ({
+        volume: prevState.volume - 0.1
+      }))
+    }
   }
 
   pause = () => {
