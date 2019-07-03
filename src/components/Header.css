@@ -9,7 +9,6 @@ header nav a {
   text-decoration: none;
   color:black;
   margin: 2em;
-
 }
 
 header nav img {
@@ -47,49 +46,52 @@ a:hover {
   animation: glitch10s .25s infinite;
 }
 
+
+/* color inspiration for each era: https://juiceboxinteractive.com/blog/color/ */
+
 @keyframes glitch80s {
-  0% {text-shadow: 4px 4px #3A68CA;}
-  20% {text-shadow: 4px 4px #CB7CD8;
+  0% {text-shadow: 4px 4px #3A68CA;}  /*ACID WASH*/
+  20% {text-shadow: 4px 4px #CB7CD8;  /*PURPLE RAIN*/
       font-size: 2.1em;
     }
-  40% {text-shadow: 4px 4px #10E7E2;}
-  60% {text-shadow: 4px 4px #FE68A8;
+  40% {text-shadow: 4px 4px #10E7E2;} /*TRON TURQOUISE*/
+  60% {text-shadow: 4px 4px #FE68A8;  /*MIAMI*/
       font-size: 2.1em;}
-  80% {text-shadow: 4px 4px #F9EB10;}
-  100% {text-shadow: 4px 4px #ff2154;}
+  80% {text-shadow: 4px 4px #F9EB10;} /*PACMAN*/
+  100% {text-shadow: 4px 4px #FF2154;}  /*POWERSUIT*/
 }
   
 @keyframes glitch90s {
-  0% {text-shadow: 4px 4px #B13A1A;}
-  20% {text-shadow: 4px 4px #822C75;
+  0% {text-shadow: 4px 4px #B13A1A;}  /*OPRAH'S COUCH*/
+  20% {text-shadow: 4px 4px #822C75;  /*TRACKSUIT*/
       font-size: 2.1em;}
-  40% {text-shadow: 4px 4px #164DB1;}
-  60% {text-shadow: 4px 4px #287EA1;
+  40% {text-shadow: 4px 4px #164DB1;} /*DA BA DEE DA BA DAA*/
+  60% {text-shadow: 4px 4px #287EA1;  /*SEATTLE SPRUCE*/
       font-size: 2.1em;}
-  80% {text-shadow: 4px 4px #E4A836;}
-  100% {text-shadow: 4px 4px #B2336C;}
+  80% {text-shadow: 4px 4px #E4A836;} /*'DOH DIJON*/
+  100% {text-shadow: 4px 4px #B2336C;}  /* MOODY MAUVE*/
 }
   
 @keyframes glitch00s {
-  0% {text-shadow: 4px 4px #DF19C1;}
-  20% {text-shadow: 4px 4px #FE6301;
+  0% {text-shadow: 4px 4px #DF19C1;}  /*PARIS HILTON PINK*/
+  20% {text-shadow: 4px 4px #FE6301;  /*NICKELODEON SPLAT*/
         font-size: 2.1em;}
-  40% {text-shadow: 4px 4px #F0C215;}
-  60% {text-shadow: 4px 4px #24D513;
+  40% {text-shadow: 4px 4px #F0C215;} /*LITTLE MISS SUNSHINE*/
+  60% {text-shadow: 4px 4px #24D513;  /*LIVEWIRE*/
         font-size: 2.1em;}
-  80% {text-shadow: 4px 4px #419ADE;}
-  100% {text-shadow: 4px 4px #E13157;}
+  80% {text-shadow: 4px 4px #419ADE;} /*YES WE CYAN*/
+  100% {text-shadow: 4px 4px #E13157;}  /*ZENON RUBY*/
 }
   
 @keyframes glitch10s {
-  0% {text-shadow: 4px 4px #EFB6BF;}
-  20% {text-shadow: 4px 4px #C86D4E;
+  0% {text-shadow: 4px 4px #EFB6BF;}  /*MILLENNIAL PINK*/
+  20% {text-shadow: 4px 4px #C86D4E;  /*POLISHED COPPER*/
           font-size: 2.1em;}
-  40% {text-shadow: 4px 4px #DDDDDD;}
-  60% {text-shadow: 4px 4px #FE3C71;
+  40% {text-shadow: 4px 4px #DDDDDD;} /*QUARTZ*/
+  60% {text-shadow: 4px 4px #FE3C71;  /*ONE MILLION LIKES*/
           font-size: 2.1em;}
-  80% {text-shadow: 4px 4px #28D666;}
-  100% {text-shadow: 4px 4px #0082FE;}
+  80% {text-shadow: 4px 4px #28D666;}  /*SUCCULENT*/
+  100% {text-shadow: 4px 4px #0082FE;}  /*SOCIAL BUBBLE*/
 }
   
 @keyframes flashing {
