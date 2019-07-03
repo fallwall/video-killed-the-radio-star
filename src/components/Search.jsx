@@ -1,8 +1,6 @@
 import React from 'react';
 
-function Search(props) {
-
-
+export default function Search(props) {
   return (
     <>
       <div className="search-area">
@@ -13,8 +11,4 @@ function Search(props) {
       </div>
     </>
   )
-
-
 }
-
-export default Search;

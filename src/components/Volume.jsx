@@ -6,6 +6,5 @@ export default function Volume(props) {
     <div className="volume-bar">
       <Filler volume={props.volume} />
     </div>
-
   )
 }

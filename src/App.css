@@ -56,9 +56,9 @@ button:hover {
   color:black;
   border: 2px solid black;
 }
-/* ----------- iPad 1, 2, Mini and Air ----------- */
 
 
+/* iPad */
 /* Portrait and Landscape */
 @media only screen 
   and (min-device-width: 768px) 
@@ -68,21 +68,28 @@ button:hover {
       visibility:none;
       display: none;
     }
-
 }
-
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
-    img {
-      visibility:none;
-      display: none;
+    header h1 {
+      font-size: 25px;
     }
-
-
+    header a {
+      font-size: 13px;
+    }
+    .screen-cover { 
+    background-image: none;
+  }
+  .video-container{
+    width: 73%;
+  }
+  .controls {
+    transform: translate(136%, -24%);
+  }
 }
 
 /* Landscape */
@@ -95,35 +102,12 @@ button:hover {
       visibility:none;
       display: none;
     }
-
-}
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    img, .screen-overlay {
-      visibility:none;
-      display: none;
+    .controls {
+      transform: translate(170%, -51%);
     }
-
-
-}
-
-
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    img, .screen-overlay {
-      visibility:none;
-      display: none;
+    .video-container {
+      transform: translate(-36.5%, -55%);
+      width: 38%;
     }
 }
 
@@ -138,7 +122,6 @@ button:hover {
       visibility:none;
       display: none;
     }
-
 }
 
 /* Portrait */
@@ -167,6 +150,10 @@ button:hover {
     img, .screen-overlay {
       visibility:none;
       display: none;
+    }
+    .react-player {
+      transform: translate(-36.5%, -55%);
+      width: 38%;
     }
 
 }
@@ -197,6 +184,10 @@ button:hover {
       visibility:none;
       display: none;
     }
+    .video-container {
+      transform: translate(-36.5%, -55%);
+      width: 38%;
+    }
 
 }
 
@@ -212,6 +203,86 @@ button:hover {
       visibility:none;
       display: none;
     }
+    .video-container {
+      transform: translate(-36.5%, -55%);
+      width: 38%;
+    }
 
 }
 
+
+/* iPhone X */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+      header {
+        width:175px;
+      }
+      header h1 {
+        font-size: 19px;
+      }
+      header a {
+        display: inline-block;
+        margin: 0;
+        font-size: 10px;
+        padding: 0;
+      }
+      input {
+        width: 100px;
+      }
+      .screen-overlay {
+        display: none;
+        visibility:hidden;
+      }
+      .message {
+        display: none;
+      }
+      .video-container {
+       display: none;
+      }
+     }
+
+     @media only screen 
+    and (device-width : 812px) 
+    and (device-height : 375px) 
+    and (-webkit-device-pixel-ratio : 3) {
+      header {
+        width:175px;
+      }
+      header h1 {
+        font-size: 19px;
+      }
+      header a {
+        display: inline-block;
+        margin: 0;
+        font-size: 10px;
+        padding: 0;
+      }
+      input {
+        width: 100px;
+      }
+      .message {
+        display: none;
+      }
+      .video-container {
+        display: none;
+       }
+
+     }
+
+
+     sceen display
+
+     @media screen and (min-width: 1800px) {
+      .controls {
+        transform: translate(207%, -43%);
+      }
+      .video-container {
+        transform: translate(-13.5%, -35%);
+        width: 100%;
+      }
+      .react-player {
+        width: 583px;
+      }
+  }

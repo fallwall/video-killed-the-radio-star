@@ -112,7 +112,6 @@ export default class Screen extends React.Component {
     }))
   }
 
-
   //mouse enter/leave volume button >> volume bar appear/disappear
   handleMouseEnter = () => {
     this.setState({
