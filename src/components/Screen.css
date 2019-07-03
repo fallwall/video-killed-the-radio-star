@@ -29,7 +29,7 @@
   position: absolute; 
   top: 50%;
   left: 50%;
-  transform: translate(-58.5%, -28%);
+  transform: translate(-58.5%, -30%);
   width: 30%;
   display: flex;
   z-index: -1;
@@ -51,13 +51,13 @@
 .volume-bar {
   position: relative;
   height: 20px;
-  width: 50px;
+  width: 100px;
   border-radius: 50px;
   border: 1px solid black;
 }
 
 .filler {
-  background: rgb(204, 204, 204, 0.6);
+  background: rgb(204, 204, 204, 0.7);
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
@@ -86,24 +86,25 @@
   color:black;
 }
 
-.screen-overlay{
-  opacity:0.1;
-  background-color: rgba(255, 255, 255, 0.0000000001);
-  background-blend-mode: lighten;
-  background-image: url(https://media.giphy.com/media/pyqqSHqdekwVi/giphy.gif);
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0px;
-  left:0px;
-  z-index:-2;
-}
-
 .screen-cover {
   opacity:1;
   background-blend-mode: lighten;
   background-image: url("../images/screencover.png");
   min-height:90vh;
+  bottom: 0;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .controls {
+    transform: translate(154%, -36%);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .controls {
+    transform: translate(166%, -32%);
+  }
 }
