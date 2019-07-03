@@ -1,3 +1,7 @@
+.media-alert {
+  display:none;
+}
+
 * {
   text-align: center;
   font-family: 'Ultra', serif;
@@ -272,17 +276,14 @@ button:hover {
      }
 
 
-     sceen display
+     /* sceen display */
 
-     @media screen and (min-width: 1800px) {
+@media screen and (min-width: 1200px) and (max-width: 1200px) {
       .controls {
         transform: translate(207%, -43%);
       }
       .video-container {
-        transform: translate(-13.5%, -35%);
-        width: 100%;
-      }
-      .react-player {
-        width: 583px;
+            transform: translate(-23.5%, -54%);
+    width: 39%;
       }
   }

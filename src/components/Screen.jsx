@@ -3,6 +3,18 @@ import Volume from './Volume';
 import ReactPlayer from 'react-player';
 import './Screen.css';
 
+let playerWidth = "500px";
+let playerHeight = "483px";
+
+if (window.innerWidth > 1899) {
+  playerWidth = "900px";
+  playerHeight = "600px";
+} else if (window.innerWidth > 1500) {
+  playerWidth = "570px";
+} else if (window.innerWidth > 1200) {
+  playerWidth = "520px";
+}
+
 export default class Screen extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +35,8 @@ export default class Screen extends React.Component {
     return arr;
   }
 
-  componentDidMount() {
+
+  setPlayList = () => {
     const testlist = this.shuffle(this.props.list);
     let urlList = testlist.map((videoId) => {
       return `https://player.vimeo.com/video/${videoId}`
@@ -31,6 +44,17 @@ export default class Screen extends React.Component {
     this.setState({
       list: urlList
     })
+  }
+
+  componentDidMount() {
+    this.setPlayList()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.list !== this.props.list) {
+      this.setPlayList();
+    }
+    console.log(window.innerWidth);
   }
 
   //to next song for error or end of a song
@@ -73,8 +97,10 @@ export default class Screen extends React.Component {
           onEnded={() => {
             this.nextSong()
           }}
-          width="500px"
-          height="483px"
+          width={playerWidth}
+          height={playerHeight}
+          // width="500px"
+          // height="483px"
           config={{
             vimeo: {
               playerOptions:

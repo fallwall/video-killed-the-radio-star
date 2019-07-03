@@ -40,6 +40,13 @@ class Main extends React.Component {
           const list = playlists[props.match.params.playlist]
           return <Screen list={list} />
         }} />
+
+
+        {
+          window.matchMedia("(min-width: 1200px)").matches  && 
+            <p> worked </p>
+          }
+        
       </>
     )
   }
