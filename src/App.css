@@ -26,6 +26,10 @@ footer img {
 footer {
   bottom: 0;
   z-index:5;
+  position: absolute;
+  width: 100%;
+  margin-bottom: -230px;
+  text-shadow: 5px 5px grey;
 }
 
 input {

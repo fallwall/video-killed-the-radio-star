@@ -6,9 +6,9 @@
 }
 
 .react-player {
-    width: 500px;
-    height: 483px;
-    /* margin-bottom: 250px; */
+  width: 500px;
+  height: 483px;
+ 
 }
 
 #temp-screen {
@@ -56,10 +56,6 @@
   border: 1px solid black;
 }
 
-.volume-bar-hidden {
-  visibility: hidden;
-}
-
 .filler {
   background: rgb(204, 204, 204, 0.6);
   height: 100%;
@@ -67,36 +63,27 @@
   transition: width .2s ease-in;
 }
 
-.filter-hidden {
-  visibility: hidden;
-}
-
-button {
-  margin-right: 10px;
+.controls button:hover {
+  background: transparent;
+  color: black;
+  border: black 0.1px solid;
   padding: 7px 12px;
   font-size: 14px;
-  background: black;
-  color: white;
-  font-family: 'Ultra', serif;
-  cursor: pointer;
-  outline: 0;
 }
 
 .controls button {
   margin: 2em 0;
-}
-
-.controls button:hover {
   border: none;
-  height: 1px;
-  width: 1px;
+  height: 0.1px;
+  width: 0.11px;
   color: grey;
   background: grey;
   border-radius: 50%;
 }
 
 .controls button:hover span {
-  display:none;
+  display: visible;
+  color:black;
 }
 
 .screen-overlay{
@@ -116,10 +103,7 @@ button {
   opacity:1;
   background-blend-mode: lighten;
   background-image: url("../images/screencover.png");
-  /* position:fixed; */
-  /* min-width:100vw; */
   min-height:90vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /* z-index:9999; */
 }

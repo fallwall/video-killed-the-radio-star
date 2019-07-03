@@ -32,12 +32,15 @@ export default class Screen extends React.Component {
       list: urlList
     })
   }
+
+  //to next song for error or end of a song
   nextSong = () => {
     this.setState(prevState => ({
       current: prevState.current + 1
     }))
   }
 
+  //buttons for next/previous track
   handleClickForward = (ev) => {
     ev.preventDefault();
     if (this.state.current < this.state.list.length) {
@@ -46,7 +49,6 @@ export default class Screen extends React.Component {
       }))
     }
   }
-
   handleClickBackward = (ev) => {
     ev.preventDefault();
     if (this.state.current > 0) {
@@ -87,6 +89,7 @@ export default class Screen extends React.Component {
     )
   }
 
+  //volume buttons
   volumeUp = () => {
     if (this.state.volume < 0.9) {
       this.setState(prevState => ({
@@ -94,7 +97,6 @@ export default class Screen extends React.Component {
       }))
     }
   }
-
   volumeDown = () => {
     if (this.state.volume > 0.1) {
       this.setState(prevState => ({
@@ -103,6 +105,7 @@ export default class Screen extends React.Component {
     }
   }
 
+  //pause/start button
   pause = () => {
     this.setState(prevState => ({
       playing: !prevState.playing
@@ -116,16 +119,14 @@ export default class Screen extends React.Component {
       mouseOnVolume: true
     })
   }
-  
   handleMouseLeave = () => {
     this.setState({
       mouseOnVolume: false
     })
-   }
+  }
 
   render() {
     return (
-
       <div className="screen" >
         <div className="screen-cover" >
           <div className="screen-overlay">
@@ -141,18 +142,36 @@ export default class Screen extends React.Component {
           }
 
           <div className="controls">
-            <button onClick={this.handleClickBackward}><span>Previous</span></button>
-            <button onClick={this.handleClickForward}><span>Next</span></button>
-            {this.state.mouseOnVolume &&
-              <Volume volume={this.state.volume} />}
+            <button
+              onClick={this.handleClickBackward}>
+              <span>Previous</span>
+            </button>
+            <button
+              onClick={this.handleClickForward}>
+              <span>Next</span>
+            </button>
+
             <button
               onClick={this.volumeUp}
               onMouseEnter={this.handleMouseEnter}
               onMouseLeave={this.handleMouseLeave}>
               <span>Vol ++</span>
             </button>
-            <button onClick={this.volumeDown}><span>Vol --</span></button>
-            <button onClick={this.pause}><span>Start/Pause</span></button>
+
+            <button
+              onClick={this.volumeDown}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}>
+              <span>Vol --</span>
+            </button>
+
+            <button
+              onClick={this.pause}>
+              <span>Start/Pause</span>
+            </button>
+
+            {this.state.mouseOnVolume &&
+              <Volume volume={this.state.volume} />}
           </div>
 
         </div>

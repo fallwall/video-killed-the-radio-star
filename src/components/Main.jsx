@@ -5,7 +5,6 @@ import Screen from './Screen';
 import { searchVideo } from '../services/api';
 import playlists from '../data/playlists.json';
 
-
 class Main extends React.Component {
   constructor(props) {
     super(props);

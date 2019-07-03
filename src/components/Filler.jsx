@@ -3,13 +3,10 @@ import React from 'react';
 const Filler = (props) => {
   return (
     <div
-    className="filler"
-    style={{ width: `${props.volume*100}%` }} >
-
+      className="filler"
+      style={{ width: `${props.volume * 100}%` }} >
     </div>
   )
-  
-
 }
 
 export default Filler;
