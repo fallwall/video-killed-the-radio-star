@@ -89,7 +89,7 @@
   opacity:1;
   background-blend-mode: lighten;
   background-image: url("../images/screencover.png");
-  min-height:90vh;
+  min-height: 104vh;
   bottom: 0;
   background-size: cover;
   background-repeat: no-repeat;
